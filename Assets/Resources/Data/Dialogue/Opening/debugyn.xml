@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Name = Person Talking
+	PID = ID for Portrait
+	NOV = Name Override for Nameplate
+	
+	Type = Dialogue Type:
+		0 = Normal Dialogue
+		1 = Yes/No
+		2 = Choice, Answer sent to buffer.
+		
+		3 = Repeated Choice, Answer sent to buffer, returns to question with
+			used answers removed.
+			
+		4 = Meaningless Choice, Answer not sent to buffer.
+		
+		5 = End of dialogue altogether.
+		
+	Content = Speech to be sent to buffer
+	
+	OB = Option Branch to be taken to when an answer is decided
+	O1 - O5 = Choices sent to buffer
+	
+	OB and O1-O5 are only used in states 1-3
+-->
+
+<DialogueTree>
+	<Dialogue>
+	
+		<Speech Name="Debug Boy">
+			<PID> 1 </PID>
+			<NOV> ??? </NOV>
+			<Type> 0 </Type>
+			
+			<Content>This is a test. Call me Sandwich.</Content>
+		</Speech>
+		
+		<Speech Name="Debug Boy">
+			<PID> 3 </PID>
+			<NOV> Sandwich </NOV>
+			<Type> 1 </Type>
+			
+			<Content>This is a test of Yes/No Choice. Am I pretty?</Content>
+			<OB>QYN</OB>
+		</Speech>
+		
+		<Speech Name="Debug Boy">
+			<PID> 0 </PID>
+			<NOV> ??? </NOV>
+			<Type> 0 </Type>
+			
+			<Content>This is the end of the yn test dialogue.</Content>
+		</Speech>
+		
+		<Speech Name="Debug Boy" Branch="QYN0">
+			<PID> 3 </PID>
+			<NOV> Sandwich </NOV>
+			
+			<Content>You picked 'yes'.</Content>
+		</Speech>
+	
+		<Speech Name="Debug Boy" Branch="QYN0">
+			<PID> 3 </PID>
+			<NOV> Sandwich </NOV>
+			
+			<Content>Yes? Sandwich?</Content>
+		</Speech>
+	
+		<Speech Name="Debug Boy" Branch="QYN1">
+			<PID> 3 </PID>
+			<NOV> Sandwich </NOV>
+			
+			<Content>You picked 'no'.</Content>
+		</Speech>
+	
+		<Speech Name="Debug Boy" Branch="QYN1">
+			<PID> 3 </PID>
+			<NOV> Sandwich </NOV>
+			
+			<Content>No? Rude?</Content>		
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>

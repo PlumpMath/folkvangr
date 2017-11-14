@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DialogueTree>
+	<Dialogue>
+	
+		<Speech Name="Sign">
+			<PID>1</PID>
+			<Content>(There's a stone with an arrow on it.)</Content>
+		</Speech>
+		
+		<Speech Name="Sign">
+			<Type>1</Type>
+			<PID>1</PID>
+			<Content>(Someone has inscribed a message. Read it?)</Content>
+			<OB>QYN</OB>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<PID>1</PID>
+			<Content>Jump with X.</Content>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<PID>1</PID>
+			<Content>Throw with C.</Content>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<PID>1</PID>
+			<Content>Hold C to keep it spinning.</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<PID>1</PID>
+			<Content>Press A while it's out to fly.</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<PID>1</PID>
+			<Content>Careful it doesn't get stuck.</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<PID>1</PID>
+			<Content>- Dr. Saturday</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<PID>1</PID>
+			<Content>(What an incredible waste of time.)</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<PID>1</PID>
+			<Type>5</Type>
+			<Content>(This is absolute nonsense.)</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN1">
+			<PID>1</PID>
+			<Type>5</Type>
+			<Content>(Should probably read it, though.)</Content>
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>

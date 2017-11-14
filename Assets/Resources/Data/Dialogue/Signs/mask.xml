@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DialogueTree>
+	<Dialogue>
+	
+		<Speech Name="Sign">
+			<Content>(There's a stone with a strange symbol on it.)</Content>
+		</Speech>
+		
+		<Speech Name="Sign">
+			<Type>1</Type>
+			<Content>(Someone has inscribed a message. Read it?)</Content>
+			<OB>QYN</OB>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<Content>The Mask is bound to your spirit.</Content>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<Content>For as long as you have lived, you have worn it.</Content>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<Content>Your spirit is bound to the mask.</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<Content>Your sole duty is to maintain it.</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<Content>Your will shall suffer should it break.</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<Type>5</Type>
+			<Content>- Mr. Wednesday</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN1">
+			<Type>5</Type>
+			<Content>(Should probably read it, though.)</Content>
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Name = Person Talking
+	PID = ID for Portrait
+	NOV = Name Override for Nameplate
+	
+	Type = Dialogue Type:
+		0 = Normal Dialogue
+		1 = Yes/No
+		2 = Choice, Answer sent to buffer.
+		
+		3 = Repeated Choice, Answer sent to buffer, returns to question with
+			used answers removed.
+			
+		4 = Meaningless Choice, Answer not sent to buffer.
+		
+		5 = End of dialogue altogether.
+		
+	Content = Speech to be sent to buffer
+	
+	OB = Option Branch to be taken to when an answer is decided
+	O1 - O5 = Choices sent to buffer
+	
+	OB and O1-O5 are only used in states 1-3
+-->
+
+<DialogueTree>
+	<Dialogue>
+	
+		<Speech Name="Debug Boy">
+			<PID> 1 </PID>
+			<NOV> ??? </NOV>
+			
+			<Content>This is a test. Call me Sandwich.</Content>
+		</Speech>
+		
+		<Speech Name="Debug Boy">
+			<PID> 3 </PID>
+			<NOV> Sandwich </NOV>
+			<Type> 4 </Type>
+			
+			<Content>This choice is meaningless.</Content>
+			
+			<O1>Nice!</O1>
+			<O2>Coolio!</O2>
+			<O3>Wowsers!</O3>
+			<O4>Radical!</O4>
+			<O5>Tubular!</O5>
+		</Speech>
+		
+		<Speech Name="Debug Boy">
+			<PID> 0 </PID>
+			<NOV> Sandwich </NOV>
+			
+			<Content>Nobody cares what you think.</Content>
+		</Speech>
+		
+		<Speech Name="Debug Boy">
+			<PID> 0 </PID>
+			<NOV> Sandwich </NOV>
+			
+			<Content>This is the end of the choice test dialogue.</Content>
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>

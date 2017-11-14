@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DialogueTree>
+	<Dialogue>
+	
+		<Speech Name="Sign">
+			<Content>(There's a stone with a strange symbol on it.)</Content>
+		</Speech>
+		
+		<Speech Name="Sign">
+			<Type>1</Type>
+			<Content>(Someone has inscribed a message. Read it?)</Content>
+			<OB>QYN</OB>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<Content>Don't be discouraged.</Content>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<Content>You can do more than you give credit for.</Content>
+		</Speech>
+
+		<Speech Name="Sign" Branch="QYN0">
+			<Content>Dust off your shoulders, and go for it.</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN0">
+			<Type>5</Type>
+			<Content>- Mr. Wednesday</Content>
+		</Speech>
+		
+		<Speech Name="Sign" Branch="QYN1">
+			<Type>5</Type>
+			<Content>(There are more pressing matters at hand.)</Content>
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>
