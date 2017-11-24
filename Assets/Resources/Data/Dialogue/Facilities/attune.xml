@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Name = Person Talking
+	PID = ID for Portrait
+	NOV = Name Override for Nameplate
+	
+	Type = Dialogue Type:
+		0 = Normal Dialogue
+		1 = Yes/No
+		2 = Choice, Answer sent to buffer.
+		
+		3 = Repeated Choice, Answer sent to buffer, returns to question with
+			used answers removed.
+			
+		4 = Meaningless Choice, Answer not sent to buffer.
+		
+		5 = End of dialogue altogether.
+		
+	Content = Speech to be sent to buffer
+	
+	OB = Option Branch to be taken to when an answer is decided
+	O1 - O5 = Choices sent to buffer
+	
+	OB and O1-O5 are only used in states 1-3
+-->
+
+<DialogueTree>
+	<Dialogue>
+	
+		<Speech Name="Hemlighet">
+			<Content>Aye ya, wha' ya need?</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Type> 2 </Type>
+			
+			<Content>Ya feel 'ike attunin' yer ego?</Content>
+			<OB>QCHC</OB>
+			<O1>Aye</O1>
+			<O2>Nay</O2>
+			<O3>What?</O3>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>A'ways a pleasur' to 'elp.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC0">
+			<Type> 5 </Type>
+			<Content>Aye!</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC1">
+			<Type> 5 </Type>
+			<Content>What yeh talkin' like tha' for?</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>Yer ego's a manifestin' o' yer psyche.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>It defines yerself beyond the biological.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>An' it's keepin' yer soul together.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>But it ain't rigid.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>I'm 'ere to 'elp you control yerself.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>Yeh can attune two aspecs.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>By pickin' cards I'll show yeh.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>Pick wit yer mask, by the way.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>An Offense, an' a Support.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>First one' ya pick is dominan'.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>The dominan' aspec gives two benefits.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>But the major benifit's got a caveat.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>Offense Major gives ya a new attack.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>Support Major gives ya boons.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>I put drawin's on the cards by the way.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>Ya don' gotta remember what gives what.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>Press 'D' ta check attunement.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>An' oh ya, almos' forgot.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>These're aspecs a yer soul.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>Yeh can make each aspec stronger.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>But yeh gotta become stronger yerself.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>No in a physical way.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>But yeh'll figure that out.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Content>That shoul be enuff info.</Content>
+		</Speech>
+	
+		<Speech Name="Hemlighet" Branch="QCHC2">
+			<Type>5</Type>
+			<Content>Don't forget this.</Content>
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>
