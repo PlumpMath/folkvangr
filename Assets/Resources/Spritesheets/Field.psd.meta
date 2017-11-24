@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4e8ba70d69763594b8db5f99dede39d5
-timeCreated: 1510361832
+timeCreated: 1511411639
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -56,6 +56,8 @@ TextureImporter:
     21300098: BGDirtL
     21300100: BGDirt
     21300102: BGDirtR
+    21300104: EventEmpt
+    21300106: EventFilled
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -98,7 +100,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 15.99
+  spritePixelsToUnits: 16
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -851,7 +853,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -865,7 +867,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -876,6 +878,34 @@ TextureImporter:
         serializedVersion: 2
         x: 200
         y: 184
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EventEmpt
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EventFilled
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 128
         width: 16
         height: 16
       alignment: 0

@@ -108,7 +108,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4875
 --- !u!95 &95209405721840772
 Animator:
   serializedVersion: 3
@@ -141,6 +141,10 @@ MonoBehaviour:
   facingRight: 0
   jumping: 0
   recall: 0
+  repositioning: 0
+  hp: 0
+  flytime: 0
+  outOfBoundTime: 0
 --- !u!212 &212193343002298656
 SpriteRenderer:
   m_ObjectHideFlags: 1

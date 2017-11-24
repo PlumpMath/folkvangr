@@ -8,6 +8,7 @@ TagManager:
   - Mask
   - Monster
   - EnemyShot
+  - Card
   layers:
   - Default
   - TransparentFX
