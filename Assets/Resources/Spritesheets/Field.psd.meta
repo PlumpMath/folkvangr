@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4e8ba70d69763594b8db5f99dede39d5
-timeCreated: 1511411639
+timeCreated: 1511510006
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,6 +58,7 @@ TextureImporter:
     21300102: BGDirtR
     21300104: EventEmpt
     21300106: EventFilled
+    21300108: Gate
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -895,7 +896,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -909,7 +910,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gate
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 8
+        width: 40
+        height: 56
+      alignment: 9
+      pivot: {x: 0.2, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

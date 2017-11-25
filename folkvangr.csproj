@@ -243,6 +243,7 @@
     <Compile Include="Assets\Scripts\Speech.cs" />
     <Compile Include="Assets\Scripts\SpeechContainer.cs" />
     <Compile Include="Assets\Scripts\SporeBullet.cs" />
+    <Compile Include="Assets\Scripts\TitleScreen.cs" />
     <Compile Include="Assets\Scripts\TuningCard.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a7c1a4c3ac123874ba71ab3b1c5faff6
-timeCreated: 1510559279
+timeCreated: 1511562287
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,9 @@ TextureImporter:
     21300010: Choicebox
     21300012: square
     21300014: HPHolder
+    21300016: Day
+    21300018: DayCounter
+    21300020: Soup
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -219,7 +222,35 @@ TextureImporter:
         width: 256
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DayCounter
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 208
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Soup
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 184
+        width: 128
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

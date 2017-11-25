@@ -39,6 +39,9 @@ public class MessageBox : MonoBehaviour {
 
     int RMBI;                               // Return MBI to return for when a branch that is not the main branch ends.
 
+    GameObject HPBar;
+    GameObject Soup;
+
     public static bool displaying;
 
     // Use this for initialization
@@ -65,6 +68,12 @@ public class MessageBox : MonoBehaviour {
 
         chcBox = transform.GetChild(1).gameObject;
 
+        if (transform.childCount > 3)
+        {
+            HPBar = transform.GetChild(3).gameObject;
+            Soup = transform.GetChild(4).gameObject;
+        }
+
         // Hide these bad boys we don't need to see their ugly mugs
         msgBox.SetActive(false);
         chcBox.SetActive(false);
@@ -76,10 +85,41 @@ public class MessageBox : MonoBehaviour {
         // Update in the updater
         UpdateMessageBox();
         UpdateChoiceBox();
+
+        if (Soup != null && HPBar != null)
+        {
+            UpdateElements();
+        }
         
         // y'all don't need this
         //DebugInputs();
 	}
+
+    void UpdateElements()
+    {
+        if (displaying)
+        {
+            Soup.SetActive(false);
+            HPBar.SetActive(false);
+        }
+        else
+        {
+            Soup.SetActive(GameObject.FindGameObjectWithTag("Monster") == null);
+
+            if (GameObject.FindGameObjectWithTag("Monster"))
+            {
+                HPBar.SetActive(GameObject.FindGameObjectWithTag("Monster").GetComponent<MonsterStats>().isActive);
+            }
+
+        }
+
+        if (Soup.activeSelf)
+        {
+            Soup.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = PlayerStats.nextBoss;
+
+            Soup.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = PlayerStats.currentDay.ToString();
+        }
+    }
 
     void UpdateMessageBox()
     {
@@ -87,7 +127,10 @@ public class MessageBox : MonoBehaviour {
         if (dialogue.diaBranch.Count > 0)
         {
             displaying = true;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().Halt();
+            if (GameObject.FindGameObjectWithTag("Player"))
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().Halt();
+            }
             List<Speech> dia = dialogue.diaBranch;  // rip out the dialogue from the db object
 
             msgBox.SetActive(true);                 // activate the messagebox
@@ -100,6 +143,7 @@ public class MessageBox : MonoBehaviour {
             {
                 msgName.text = dia[MBI].name;
             }
+            
 
             MTP = dia[MBI].type;                    // Set current message type
             curBranch = dia[MBI].branch;            // Current branch

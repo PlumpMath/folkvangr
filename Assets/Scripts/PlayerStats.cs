@@ -12,6 +12,9 @@ public class PlayerStats : ScriptableObject{
     public static float Speed;
     public static float ValkMult;
 
+    public static string nextBoss = "";
+    public static int currentDay = 0;
+
 
     public static void SetUp()
     {
@@ -61,6 +64,11 @@ public class PlayerStats : ScriptableObject{
         Attack = 5;
         Speed = 5f;
         ValkMult = 1f;
+    }
+
+    public static void DetermineSoup()
+    {
+        nextBoss = "Portobeyo";
     }
     
 }

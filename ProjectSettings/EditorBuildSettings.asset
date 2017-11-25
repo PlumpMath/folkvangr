@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: d4c9e2b40073acc418e7b009696bbe58
+  - enabled: 1
+    path: Assets/Scenes/Vangr.unity
+    guid: 3db0732dc676c184eb91b54f00f5adab
+  - enabled: 1
+    path: Assets/Scenes/FolkvangrPath.unity
+    guid: c095285572dd93a4580a9959879665ad
+  - enabled: 1
+    path: Assets/Scenes/Underworld.unity
+    guid: 9846e021a97aa9d479a187c09923a3db
+  - enabled: 1
+    path: Assets/Scenes/Arenas/Portobeyo.unity
+    guid: 8cf9365ea4c3e12459851677f87d8919
