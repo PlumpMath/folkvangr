@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9eb33358f25559b46ba0d8afc248d8e0
-timeCreated: 1511586802
+timeCreated: 1511649964
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -113,8 +113,8 @@ TextureImporter:
         y: 216
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -20,6 +20,24 @@ public class MonsterStats : MonoBehaviour {
         set;
     }
 
+    public bool ReactToMask
+    {
+        get;
+        set;
+    }
+
+    public int damageTaken
+    {
+        get;
+        set;
+    }
+
+    public Vector3 reactPos
+    {
+        get;
+        set;
+    }
+
     public bool isActive
     {
         get;
@@ -63,13 +81,17 @@ public class MonsterStats : MonoBehaviour {
         }
     }
 
-    public void Hit (int dmg)
+    public void Hit (int dmg, Vector3 pos, bool wasMask)
     {
+        damageTaken = dmg;
         if (isActive)
         {
             CurHP -= dmg;
         }
         React = true;
+        ReactToMask = wasMask;
+        reactPos = pos;
+        
     }
 
 }

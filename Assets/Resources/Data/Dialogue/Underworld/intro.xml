@@ -30,13 +30,173 @@
 		<Speech Name="Odin">
 			<NOV>???</NOV>
 			<PID>1</PID>
-			<Content>(You cannot feel anything familiar)</Content>
+			<Content>(Do you... even have eyes?)</Content>
 		</Speech>
 		
 		<Speech Name="Odin">
 			<NOV>???</NOV>
 			<PID>1</PID>
-			<Content>(Everything seems too far apart.)</Content>
+			<Content>(No... doesn't feel like you have eyes.)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(Everything around you feels incredibly alien, actually.)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(You are floating through an endless void.)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(Floating seems like the right word. Void is more of a guess, really.)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(It seems like this should be relaxing, but it isn't really.)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(Not that it's stressful, it's more... overwhelmingly neutral.)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(Suddenly...)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(You can feel a force pulling you!)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Type>4</Type>
+			<Content>(Should you resist?)</Content>
+			
+			<O1>Yes</O1>
+			<O2>No</O2>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(It's become too strong to resist!)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(A powerful gust blows through every aspect of your being!)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(A kinetic rush of feeling and energy overwhelms your heavy daze!)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(You can feel yourself becoming solid once again!)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(It's time to wake up.)</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>..............</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>..............................</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>......................................................</Content>
 		</Speech>
 		
 		<Speech Name="Odin">
@@ -45,7 +205,17 @@
 			<Content>(You come together.)</Content>
 		</Speech>
 		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>...</Content>
+		</Speech>
 		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<PID>1</PID>
+			<Content>(You open your eyes.)</Content>
+		</Speech>
 	
 	</Dialogue>
 	

@@ -11,14 +11,18 @@ public class PlayerStats : ScriptableObject{
     public static int Attack;
     public static float Speed;
     public static float ValkMult;
+    public static int ValkCount = 0;
 
     public static string nextBoss = "";
     public static int currentDay = 0;
 
+    public static int DeltaAttack;
+    public static float deltaSpeed;
+
 
     public static void SetUp()
     {
-        Attack = 5;
+        Attack = 3;
         Speed = 5f;
         ValkMult = 1f;
 

@@ -54,7 +54,7 @@ public class TitleScreen : MonoBehaviour {
             optionsMenu = false;
         }
 
-        if (optionsMenu)
+        if (optionsMenu && !newGame)
         {
             cam.transform.position = Vector3.Lerp(cam.transform.position, startpos + Vector3.up * -10.5f, Time.fixedDeltaTime * 8f);
             resDisplay.GetComponent<Text>().text = "[<] " + resolutions[resIndex].ToString() + " [>]";

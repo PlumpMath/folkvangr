@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Name = Person Talking
+	PID = ID for Portrait
+	NOV = Name Override for Nameplate
+	
+	Type = Dialogue Type:
+		0 = Normal Dialogue
+		1 = Yes/No
+		2 = Choice, Answer sent to buffer.
+		
+		3 = Repeated Choice, Answer sent to buffer, returns to question with
+			used answers removed.
+			
+		4 = Meaningless Choice, Answer not sent to buffer.
+		
+		5 = End of dialogue altogether.
+		
+	Content = Speech to be sent to buffer
+	
+	OB = Option Branch to be taken to when an answer is decided
+	O1 - O5 = Choices sent to buffer
+	
+	OB and O1-O5 are only used in states 1-3
+-->
+
+<DialogueTree>
+	<Dialogue>
+	
+		<Speech Name="Dorrvakt">
+			<Content>...</Content>
+		</Speech>
+	
+		<Speech Name="Dorrvakt">
+			<Content>(This creature is absolutely terrifying.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(You shudder at the thought of even engaging in conversation with it.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(It seems like this thing is eager to share how things work around here, though.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(Regardless... from what can be gathered here:)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(Each day will have a different featured monster, the 'Soup of the Day'.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(Performing well in battles will earn currency known as Valknuts.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(Though Valknuts cannot buy anything.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(They are purely emblematic and symbolic of will.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(They might be useful down the line, however.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(Talk to Hemlighet to prepare for battle. Talk to Vaktare to enter battle.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(After battle is time for the feast, where warriors can chat.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(Also Hemlighet never mentioned it, but 'S' should be pressed.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(Those assumptions really are more than meets the eye.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(How does one... press... 'S' though? Press... 'S'?)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>...</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(Thanks... Dorrvakt.)</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>You're welcome.</Content>
+		</Speech>
+		
+		<Speech Name="Dorrvakt">
+			<Content>(...!?)</Content>
+		</Speech>
+		
+	
+	</Dialogue>
+	
+</DialogueTree>

@@ -13,6 +13,9 @@ public class PlayerMove : MonoBehaviour
 
     Sprite[] spr;
 
+    AudioSource arsc;
+    AudioClip ajmp, ash, abudu;
+
     GameObject cam;
     Vector3 svel = Vector3.zero;
 
@@ -22,7 +25,7 @@ public class PlayerMove : MonoBehaviour
 
     public float flytime, outOfBoundTime;
 
-    private float invuln;
+    public float invuln, reloadtime, reloadmax;
 
     Vector3 spawn;
 
@@ -30,6 +33,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         PlayerStats.SetUp();
+        reloadtime = 0;
 
         hp = 3;
         spawn = transform.position;
@@ -42,9 +46,14 @@ public class PlayerMove : MonoBehaviour
 
         spr = Resources.LoadAll<Sprite>("Spritesheets/Char");
 
-        if (GameObject.Find("UI"))
+        arsc = GetComponent<AudioSource>();
+        ajmp = Resources.Load<AudioClip>("SFX/jump");
+        ash = Resources.Load<AudioClip>("SFX/shot");
+        abudu = Resources.Load<AudioClip>("SFX/budubu");
+
+        if (GameObject.FindGameObjectWithTag("GameController"))
         {
-            transitionHandler = GameObject.Find("UI").transform.GetChild(2).GetComponent<Animator>();
+            transitionHandler = GameObject.FindGameObjectWithTag("GameController").transform.GetChild(2).GetComponent<Animator>();
         }
 
         rb = GetComponent<Rigidbody2D>();
@@ -54,6 +63,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         string maskname = hp >= 3 ? "Mask" : hp == 2 ? "Mask_Broken" : "Mask_Peril";
+        float reloadratio = reloadtime / reloadmax;
 
         for (int i = 0; i < spr.Length; i++)
         {
@@ -64,21 +74,23 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            print("Major: " + PlayerStats.MajorAttune + "; Minor: " + PlayerStats.MinorAttune);
-        }
-
         if (!repositioning)
         {
             if (!MessageBox.displaying)
             {
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    GameObject.Instantiate(Resources.Load<GameObject>("UI/Info"), transform.position, Quaternion.identity);
+                }
+
                 if (GameObject.FindGameObjectWithTag("Mask") && GameObject.FindGameObjectWithTag("Mask").GetComponent<MaskSpin>())
                 {
                     MaskSpin msk = GameObject.FindGameObjectWithTag("Mask").GetComponent<MaskSpin>();
                     transform.GetChild(0).gameObject.SetActive(false);
 
-                    
+                    msk.transform.GetComponent<SpriteRenderer>().color = new Color(1 - reloadratio, 1 - reloadratio, 1f, 1f);
+                    msk.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1 - reloadratio, 1 - reloadratio, 1f, 1f);
+
                     for (int i = 0; i < spr.Length; i++)
                     {
                         if (spr[i].name.Equals(maskname))
@@ -91,16 +103,22 @@ public class PlayerMove : MonoBehaviour
 
                     if (Input.GetKeyDown(KeyCode.A) && msk.recall == false)
                     {
+                        arsc.clip = abudu;
+                        arsc.Play();
                         recall = true;
                         flytime = 0;
                     }
+
 
                 }
                 else
                 {
                     transform.GetChild(0).gameObject.SetActive(true);
+                    transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1 - reloadratio, 1 - reloadratio, 1f, 1f);
                     if (Input.GetKeyDown(KeyCode.C))
                     {
+                        arsc.clip = ash;
+                        arsc.Play();
                         GameObject.Instantiate(Resources.Load<GameObject>("Objects/Skills/Mask"), transform.position, Quaternion.identity);
 
                     }
@@ -122,10 +140,14 @@ public class PlayerMove : MonoBehaviour
                         anim.Play("Idle");
                     }
 
+                    FireShot();
+
                     if (grounded)
                     {
                         if (Input.GetKeyDown(KeyCode.X))
                         {
+                            arsc.clip = ajmp;
+                            arsc.Play();
                             yvel = 10f;
                             jumping = true;
                         }
@@ -279,22 +301,26 @@ public class PlayerMove : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, Mathf.Sin(100 * invuln));
             invuln -= Time.fixedDeltaTime;
+
+            if (PlayerStats.MajorAttune == 0)
+            {
+                PlayerStats.DeltaAttack = -1;
+                PlayerStats.deltaSpeed = -2;
+            }
         }
         else
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
             invuln = 0f;
+
+            if (PlayerStats.MajorAttune == 0)
+            {
+                PlayerStats.DeltaAttack = 0;
+                PlayerStats.deltaSpeed = 0;
+            }
         }
 
         UpdateCamera();
-    }
-
-    private void LateUpdate()
-    {
-        if (xvel == 0)
-        {
-            transform.position = new Vector3((int)(transform.position.x*16)/16f, transform.position.y);
-        }
     }
 
     void UpdateCamera()
@@ -336,16 +362,90 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    void FireShot()
+    {
+        if (reloadtime > 0)
+        {
+            reloadtime -= Time.fixedDeltaTime;
+        }
+        else
+        {
+            reloadtime = 0;
+        }
+
+        if (Input.GetKey(KeyCode.S) && PlayerStats.MajorAttune >= 0 && reloadtime <= 0)
+        {
+            GameObject obj;
+            GameObject spawn;
+
+            Vector3 objspawnpos = GameObject.FindGameObjectWithTag("Mask") ? GameObject.FindGameObjectWithTag("Mask").transform.position : transform.position;
+
+            switch (PlayerStats.MajorAttune)
+            {
+                default:
+                    invuln = 5f;
+                    break;
+                case 1:
+                    arsc.clip = ash;
+                    arsc.Play();
+
+                    spawn = GameObject.Instantiate(Resources.Load<GameObject>("Objects/Skills/Sword"), objspawnpos + Vector3.right * (facingRight?1:-1), Quaternion.identity);
+                    spawn.transform.localScale = transform.localScale;
+                    break;
+                case 2:
+                    arsc.clip = ash;
+                    arsc.Play();
+                    obj = GameObject.Instantiate(Resources.Load<GameObject>("Objects/Effects/SmokePuff"), objspawnpos + Vector3.right * (facingRight ? 0.5f : -0.5f), Quaternion.identity);
+                    obj.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    spawn = GameObject.Instantiate(Resources.Load<GameObject>("Objects/Skills/PlayerBullet"), objspawnpos + Vector3.right * (facingRight ? 1 : -1), Quaternion.identity);
+
+                    if (!GameObject.FindGameObjectWithTag("Mask"))
+                    {
+                        yvel += 1.5f;
+                        xvel += facingRight ? -5f : 5f;
+                    }
+
+                    break;
+                case 3:
+                    break;
+            }
+            reloadtime = reloadmax;
+        }
+
+        switch (PlayerStats.MajorAttune)
+        {
+            default:
+                reloadmax = 10f;
+                break;
+            case 1:
+                reloadmax = 0.25f;
+                break;
+            case 2:
+                reloadmax = 0.15f;
+                break;
+            case 3:
+                reloadmax = 5f;
+                break;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (invuln <= 0)
         {
-            if (collision.transform.tag == "EnemyShot")
+            if (collision.transform.tag == "EnemyShot" && transform.GetChild(0).gameObject.activeSelf)
             {
-                hp--;
-                invuln = 1.5f;
-                yvel = 5f;
+                HitByAttack();
             }
+        }
+    }
+
+    public void HitByAttack()
+    {
+        if (invuln <= 0) { 
+            hp--;
+            invuln = 1.5f;  
+            yvel = 5f;
         }
     }
 
@@ -358,7 +458,19 @@ public class PlayerMove : MonoBehaviour
     public void Halt()
     {
         xvel = 0;
-        yvel = 0;
+
+        jumping = false;
+        recall = false;
+
+        if (!GameObject.FindGameObjectWithTag("Mask"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+
+            if (grounded)
+        {
+            yvel = 0;
+        }
     }
 
 }

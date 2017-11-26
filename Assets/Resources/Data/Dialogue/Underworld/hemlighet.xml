@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DialogueTree>
+	<Dialogue>
+		
+		<Speech Name="Hemlighet">
+			<NOV>???</NOV>
+			<Content>Oy.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<NOV>???</NOV>
+			<Content>Name's Hemlighet.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Now. I 'unno who ye are.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Bu' I'm 'opin' we can be good frien's.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Aye. I run the attunemen' service in the Vangr.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Now. I 'unno who ye are.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>So, Aye. I'll assume somethin' bout yeh.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>I think yer the kin' to sacrifice power for wealth.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Tha's the assumption.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Now you migh' feel you can throw yer mask a bit further.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Aye, Tha's how strong my assumptions are.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>If yeh wanna know wha' else I can do...</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Come see me in the Vangr.</Content>
+		</Speech>
+		
+		<Speech Name="Hemlighet">
+			<Content>Don't forget this.</Content>
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>

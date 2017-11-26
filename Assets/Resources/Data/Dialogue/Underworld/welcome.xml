@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DialogueTree>
+	<Dialogue>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<Content>Well met, Warrior.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<Content>You have travelled quite far to have made it here.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<Content>Though, before I get ahead of myself-</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>???</NOV>
+			<Content>You may call me Wednesday. Mister Wednesday, to be proper.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>I am Keeper of the Underworld's realms.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Type>4</Type>
+			
+			
+			<Content>Now, I assume you have many questions.</Content>
+			<O1>Who are you?</O1>
+			<O2>Where are we?</O2>
+			<O3>This Mask?</O3>
+			<O4>Why am I here?</O4>
+			<O5>Am I dead?</O5>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>However, you would be wrong in assuming I'd answer them all right now.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>I will give you a short summary of the situation.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>I am not cruel, after all.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>You are a warrior that has perished in the final battle of your legacy.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Your memory of life might be hindered depending on the battle.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Honestly, it is completely natural to not remember much.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Especially if you had your head sliced clean off! Ha!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>In all seriousness though, do not be worried.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Some spirits wander the halls for eterninty jogging their memory.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>I will warn you though, there really is no meaning in such wonder.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>That life is over. And for you, now, a new one begins.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Why worry about what has passed?</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Especially when I have such exciting news for you.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Now most souls are sent to a... quite frankly-</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Boring post-existence of... well... existence.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>There's simply no joy to be had in simply existing!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>But here, me and my wife, Mrs. Friday, we have an eye.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Haha! Between us, actually we have three eyes, to be honest!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>And those eyes are set on Warriors!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Now we like to be fair, my wife and I.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>I have my own Hall, she has her own Hall.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>And she has decided that you will enter her hall.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>That hall being the field of Folkvangr.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Now she is rather... busy right now.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Off in another godly war across the realms, actually!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>You'd be surprised how many demons and monsters invade!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>It's why we recruit warriors!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Now if you make your way to the end of the tower.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>You will find a blue door, go on right through it.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>It shall take you to a path between realms.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Between here and Folkvangr.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>There you shall begin your post-life!</Content>
+		</Speech>
+	
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>And do not feel pressured.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>We understand the confusion of the moment.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Take time to accustom yourself to your new form.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Every day leads to a new fight!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Even if you fail, you can always get back up!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>You can accomplish anything you set your mind to!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>And with that I make my exit.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<NOV>Wednesday</NOV>
+			<Content>Enjoy yourself, and may your future shine bright.</Content>
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>

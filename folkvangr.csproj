@@ -225,6 +225,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Door.cs" />
+    <Compile Include="Assets\InfoBlock.cs" />
+    <Compile Include="Assets\OdinIntro.cs" />
+    <Compile Include="Assets\PlayerBullet.cs" />
+    <Compile Include="Assets\PlayerSword.cs" />
     <Compile Include="Assets\Scripts\AttuneDiag.cs" />
     <Compile Include="Assets\Scripts\EffectDisappear.cs" />
     <Compile Include="Assets\Scripts\EventBlock.cs" />
@@ -245,9 +250,12 @@
     <Compile Include="Assets\Scripts\SporeBullet.cs" />
     <Compile Include="Assets\Scripts\TitleScreen.cs" />
     <Compile Include="Assets\Scripts\TuningCard.cs" />
+    <Compile Include="Assets\StatsPreset.cs" />
+    <Compile Include="Assets\Valknut.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Data\Dialogue\Facilities\attune.xml" />
+    <None Include="Assets\Resources\Data\Dialogue\Facilities\dorrvakt.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Facilities\gatekeeper.xml" />
     <None Include="Assets\Resources\Data\Dialogue\HowToUseDialogue.txt" />
     <None Include="Assets\Resources\Data\Dialogue\Opening\debugchc.xml" />
@@ -259,7 +267,9 @@
     <None Include="Assets\Resources\Data\Dialogue\Signs\encouragement.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Signs\mask.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Signs\tryit.xml" />
+    <None Include="Assets\Resources\Data\Dialogue\Underworld\hemlighet.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Underworld\intro.xml" />
+    <None Include="Assets\Resources\Data\Dialogue\Underworld\welcome.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

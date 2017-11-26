@@ -18,6 +18,13 @@ public class AttuneDiag : MonoBehaviour {
         spc = SpeechContainer.Load("Data/Dialogue/Facilities/attune");
 
         gcr = GameObject.FindGameObjectWithTag("GameController");
+
+        if (PlayerStats.MajorAttune == -1 || PlayerStats.MinorAttune == -1)
+        {
+            PlayerStats.MajorAttune = 2;
+            PlayerStats.MinorAttune = 3;
+            PlayerStats.SetUp();
+        }
     }
 
     // Update is called once per frame

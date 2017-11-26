@@ -73,7 +73,6 @@ public class Portobeyo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (sts.isActive)
         {
             if (Vector3.Distance(transform.position, startPos + Vector3.up*0.75f) >= 0.125f)
@@ -135,14 +134,21 @@ public class Portobeyo : MonoBehaviour
 
         if (sts.React && sts.CurHP > 0)
         {
-
-            GameObject obj = GameObject.FindGameObjectWithTag("Mask");
-            if (obj.GetComponent<MaskSpin>())
+            if (sts.ReactToMask && GameObject.FindGameObjectWithTag("Mask"))
             {
-                obj.GetComponent<MaskSpin>().recall = true;
+                GameObject obj = GameObject.FindGameObjectWithTag("Mask");
+                if (obj.GetComponent<MaskSpin>())
+                {
+                    obj.GetComponent<MaskSpin>().recall = true;
+                }
             }
 
             face.color = new Color(1f, 0f, 0f, 0.5f);
+
+            for (int i = 0; i < sts.damageTaken * PlayerStats.ValkMult; i++)
+            {
+                GameObject.Instantiate(Resources.Load<GameObject>("Objects/Valknut"), transform.position, Quaternion.identity);
+            }
 
             sts.React = false;
 
@@ -157,7 +163,7 @@ public class Portobeyo : MonoBehaviour
             }
             else
             {
-                transform.position += (transform.position - obj.transform.position)/2;
+                transform.position += (transform.position - sts.reactPos)/2;
             }
 
         }
@@ -170,6 +176,11 @@ public class Portobeyo : MonoBehaviour
             timer = 0f;
         }
 
+        if (sts.CurHP < sts.maxHP && sts.CurHP > 0)
+        {
+            sts.isActive = true;
+        }
+
 
         if (face.color != new Color(1f, 1f, 1f, 1f))
         {
@@ -179,6 +190,15 @@ public class Portobeyo : MonoBehaviour
 
         if (sts.CurHP <= 0 && !sts.isActive)
         {
+            if (GameObject.FindGameObjectWithTag("EnemyShot"))
+            {
+                foreach (GameObject g in GameObject.FindGameObjectsWithTag("EnemyShot"))
+                {
+                    GameObject.Instantiate(Resources.Load<GameObject>("Objects/Effects/SmokePuff"), g.transform.position, Quaternion.identity);
+                    GameObject.Destroy(g);
+                }
+            }
+
             if (Vector3.Distance(transform.position, startPos + Vector3.down * 1.85f) > 0.125f)
             {
                 transform.position = Vector3.Lerp(transform.position, startPos + Vector3.down * 1.85f, Time.fixedDeltaTime * 0.25f);
@@ -195,6 +215,7 @@ public class Portobeyo : MonoBehaviour
                 GameObject.Destroy(this.gameObject);
             }
         }
+
     }
 
 }

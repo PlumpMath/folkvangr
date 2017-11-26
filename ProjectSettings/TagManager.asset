@@ -9,6 +9,8 @@ TagManager:
   - Monster
   - EnemyShot
   - Card
+  - FreeBlock
+  - PlayerSkill
   layers:
   - Default
   - TransparentFX

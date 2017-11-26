@@ -54,6 +54,13 @@ public class LevelManager : MonoBehaviour {
 
                 g.transform.position = new Vector3(Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.y), Mathf.RoundToInt(pos.z));
             }
+
+            foreach (GameObject g in GameObject.FindGameObjectsWithTag("FreeBlock"))
+            {
+                Vector3 pos = g.transform.position;
+
+                g.transform.position = new Vector3(Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.y), Mathf.RoundToInt(pos.z));
+            }
         }
 	}
 }
