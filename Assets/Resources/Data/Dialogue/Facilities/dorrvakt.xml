@@ -57,15 +57,15 @@
 		</Speech>
 		
 		<Speech Name="Dorrvakt">
-			<Content>(Performing well in battles will earn currency known as Valknuts.)</Content>
+			<Content>(Performing well in battles will earn currency.)</Content>
 		</Speech>
 		
 		<Speech Name="Dorrvakt">
-			<Content>(Though Valknuts cannot buy anything.)</Content>
+			<Content>(Though there's nothing to buy with it.)</Content>
 		</Speech>
 		
 		<Speech Name="Dorrvakt">
-			<Content>(They are purely emblematic and symbolic of will.)</Content>
+			<Content>(It's purely emblematic and symbolic of will.)</Content>
 		</Speech>
 		
 		<Speech Name="Dorrvakt">

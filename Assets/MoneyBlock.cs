@@ -2,21 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSword : MonoBehaviour {
+public class MoneyBlock : MonoBehaviour {
 
-    GameObject plyr;
-
-    static bool downslash;
-
-    bool poof;
-
-    // Use this for initialization
-    void Start()
-    {
-        poof = false;
-        plyr = GameObject.FindGameObjectWithTag("Player");
-        transform.localScale = new Vector3(plyr.transform.localScale.x, downslash ? 1 : -1, 1);
-        downslash = !downslash;
+	// Use this for initialization
+	void Start () {
+		
 	}
 	
 	// Update is called once per frame
@@ -26,7 +16,7 @@ public class PlayerSword : MonoBehaviour {
                                     Physics2D.RaycastAll(transform.position + new Vector3(0.5125f, 0), Vector2.left, 1.25f),
                                     Physics2D.RaycastAll(transform.position + new Vector3(-0.5125f, 0), Vector2.right, 1.25f)};
 
-        if (rh.Length > 0 && !poof)
+        if (rh.Length > 0)
         {
             for (int i = 0; i < rh.Length; i++)
             {
@@ -39,14 +29,20 @@ public class PlayerSword : MonoBehaviour {
                         string hitag = rh[i][j].collider.transform.tag;
 
 
-                        if (hitag.Equals("Monster") && rh[i][j].collider.transform.gameObject.GetComponent<MonsterStats>())
+                        if (hitag.Equals("EnemyShot"))
                         {
-                            rh[i][j].collider.transform.gameObject.GetComponent<MonsterStats>().Hit(PlayerStats.Attack, transform.position, false);
-
 
                             GameObject obj = GameObject.Instantiate(Resources.Load<GameObject>("Objects/Effects/RisingSmokePuff"), transform.position, Quaternion.identity);
                             obj.GetComponent<SpriteRenderer>().sortingOrder = 4;
-                            poof = true;
+
+                            for (int k = 0; k < 2*PlayerStats.Attack*PlayerStats.ValkMult; k++)
+                            {
+                                GameObject.Instantiate(Resources.Load<GameObject>("Objects/Valknut"), transform.position, Quaternion.identity);
+                            }
+
+                            GameObject.Destroy(rh[i][j].collider.gameObject);
+
+                            GameObject.Destroy(this.gameObject);
                             
                             return;
                         }
@@ -55,10 +51,5 @@ public class PlayerSword : MonoBehaviour {
                 }
             }
         }
-
-        if (GetComponent<SpriteRenderer>().color.a <= 0f)
-        {
-            GameObject.Destroy(this.gameObject);
-        }
-	}
+    }
 }

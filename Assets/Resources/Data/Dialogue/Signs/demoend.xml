@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DialogueTree>
+	<Dialogue>
+	
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>That's as far as this demo will take it.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>Thank you for playing!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>Was Portobeyo tough?</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>The plan for this game is for the content to be enjoyable regardless.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>So even if you aren't great at games, you can still make it to the end.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>While also being rewarding to players that are skillful.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>The next update to the demo will include attunement strengthening.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>As well as proper day progression.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>There might even be background art.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>And at least two more bosses.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>For now you can feel free to fight Portobeyo again.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>Try out different combinations for the attunements.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>Let me know what you think of this so far, by the way!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>I want to make this game as best I can!</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>You can find me as "Pikethorn" on the internet.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>Also, if you liked it, tell your friends-</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>-Might add couch co-op eventually-</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>But don't tell *all* your friends.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>Just the ones that'll like this kinda game.</Content>
+		</Speech>
+		
+		<Speech Name="Odin">
+			<PID>1</PID>
+			<NOV>developer</NOV>
+			<Content>That's all for now, have a great day!</Content>
+		</Speech>
+	
+	</Dialogue>
+	
+</DialogueTree>

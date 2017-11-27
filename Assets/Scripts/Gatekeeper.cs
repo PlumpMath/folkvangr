@@ -25,9 +25,9 @@ public class Gatekeeper : MonoBehaviour {
             PlayerStats.DetermineSoup();
         }
 
-        if (GameObject.Find("UI"))
+        if (GameObject.FindGameObjectWithTag("GameController"))
         {
-            transitionHandler = GameObject.Find("UI").transform.GetChild(2).GetComponent<Animator>();
+            transitionHandler = GameObject.FindGameObjectWithTag("GameController").transform.GetChild(2).GetComponent<Animator>();
         }
 
         ply = GameObject.FindGameObjectWithTag("Player");

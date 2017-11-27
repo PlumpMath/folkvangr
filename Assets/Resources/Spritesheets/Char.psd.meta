@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: adf2ebc78fc281a46b530528487848e5
-timeCreated: 1511658255
+timeCreated: 1511740391
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,7 @@ TextureImporter:
     21300052: bullet1
     21300054: bullet2
     21300056: bullet3
+    21300058: MoneyBlock
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -492,7 +493,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -506,7 +507,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -520,7 +521,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -531,6 +532,20 @@ TextureImporter:
         serializedVersion: 2
         x: 80
         y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MoneyBlock
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 72
         width: 16
         height: 16
       alignment: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class PlayerMove : MonoBehaviour
     public float invuln, reloadtime, reloadmax;
 
     Vector3 spawn;
+
+    int valkDelta;
 
     // Use this for initialization
     void Start()
@@ -57,6 +60,8 @@ public class PlayerMove : MonoBehaviour
         }
 
         rb = GetComponent<Rigidbody2D>();
+
+        valkDelta = PlayerStats.ValkCount;
     }
 
     // Update is called once per frame
@@ -229,10 +234,18 @@ public class PlayerMove : MonoBehaviour
             xvel = 0;
             if (outOfBoundTime < 0)
             {
-                outOfBoundTime = 0;
-                transform.position = spawn;
-                transitionHandler.Play("blackswipeout");
-                repositioning = false;
+                if (!GameObject.FindGameObjectWithTag("Monster"))
+                {
+                    outOfBoundTime = 0;
+                    transform.position = spawn;
+                    transitionHandler.Play("blackswipeout");
+                    repositioning = false;
+                }
+                else
+                {
+                    PlayerStats.currentDay += 1;
+                    SceneManager.LoadScene("Vangr");
+                }
             }
         }
     }
@@ -284,6 +297,19 @@ public class PlayerMove : MonoBehaviour
                 }
             }
         }
+
+        if (hp <= 0)
+        {
+            LevelManager lvl = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelManager>();
+            xvel = 0;
+            yvel = 0;
+            if (GameObject.FindGameObjectWithTag("Mask"))
+            {
+                GameObject.FindGameObjectWithTag("Mask").transform.position = transform.position;
+            }
+            transform.position = transform.position + Vector3.up * lvl.tB * 2;
+        }
+
 
         rb.MovePosition(new Vector2(transform.position.x, transform.position.y) + new Vector2(xvel, yvel) * Time.fixedDeltaTime);
 
@@ -407,9 +433,22 @@ public class PlayerMove : MonoBehaviour
 
                     break;
                 case 3:
+                    spawn = GameObject.Instantiate(Resources.Load<GameObject>("Objects/MoneyBlock"), objspawnpos, Quaternion.identity);
+                    obj = GameObject.Instantiate(Resources.Load<GameObject>("Objects/Effects/SmokePuff"), objspawnpos, Quaternion.identity);
+                    obj.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    transform.position += Vector3.up * 0.75f;
                     break;
             }
             reloadtime = reloadmax;
+        }
+
+        if (PlayerStats.MajorAttune == 0 || PlayerStats.MinorAttune == 0)
+        {
+            if (PlayerStats.ValkCount > valkDelta + 200 && hp < 3 && hp > 0)
+            {
+                hp += 1;
+                valkDelta = PlayerStats.ValkCount;
+            }
         }
 
         switch (PlayerStats.MajorAttune)
@@ -424,7 +463,7 @@ public class PlayerMove : MonoBehaviour
                 reloadmax = 0.15f;
                 break;
             case 3:
-                reloadmax = 5f;
+                reloadmax = 2f;
                 break;
         }
     }

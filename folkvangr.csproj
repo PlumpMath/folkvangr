@@ -225,8 +225,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DemoReturn.cs" />
     <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\InfoBlock.cs" />
+    <Compile Include="Assets\MoneyBlock.cs" />
     <Compile Include="Assets\OdinIntro.cs" />
     <Compile Include="Assets\PlayerBullet.cs" />
     <Compile Include="Assets\PlayerSword.cs" />
@@ -264,6 +266,7 @@
     <None Include="Assets\Resources\Data\Dialogue\Opening\debugrepchc.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Opening\debugyn.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Signs\controls.xml" />
+    <None Include="Assets\Resources\Data\Dialogue\Signs\demoend.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Signs\encouragement.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Signs\mask.xml" />
     <None Include="Assets\Resources\Data\Dialogue\Signs\tryit.xml" />
