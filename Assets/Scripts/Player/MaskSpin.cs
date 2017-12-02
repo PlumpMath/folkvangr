@@ -53,6 +53,8 @@ public class MaskSpin : MonoBehaviour
 
         timeOut = 0f;
 
+        MaskBlur = Resources.Load<GameObject>("Objects/Effects/MaskBlur");
+        Valk = Resources.Load<GameObject>("Objects/Valknut");
 
         if (rh.Length > 0)
         {
@@ -70,22 +72,62 @@ public class MaskSpin : MonoBehaviour
                     }
                     target = transform.position;
 
-                    if (rh[i].collider.transform.tag.Equals("Block") || rh[i].collider.transform.tag.Equals("FreeBlock"))
+                    string hitag = rh[i].collider.transform.tag;
+
+                    recall = true;
+
+                    if (hitag.Equals("Block") || hitag.Equals("FreeBlock"))
                     {
-                        stuck = true;
-                        recall = true;
+                        target = transform.position;
                         anim.enabled = false;
+                        stuck = true;
+                    }
+                    else if (hitag.Equals("Monster") && rh[i].collider.transform.gameObject.GetComponent<MonsterStats>())
+                    {
+                        rh[i].collider.transform.gameObject.GetComponent<MonsterStats>().Hit(Mathf.RoundToInt(PlayerStats.Attack * 1.5f + PlayerStats.DeltaAttack), transform.position, true);
+                    }
+                    else if (hitag.Equals("Card") && rh[i].collider.transform.gameObject.GetComponent<TuningCard>())
+                    {
+                        stuck = false;
+
+                        GameObject card = rh[i].collider.gameObject;
+                        int cardval = card.transform.GetComponent<TuningCard>().value;
+
+                        if (PlayerStats.MajorAttune < 0f)
+                        {
+                            PlayerStats.MajorAttune = cardval;
+                        }
+                        else
+                        {
+                            PlayerStats.MinorAttune = cardval;
+                        }
+                        for (int k = 0; k < 32; k++)
+                        {
+                            Valknut obj = GameObject.Instantiate(Valk, card.transform.position, Quaternion.identity).GetComponent<Valknut>();
+                            obj.transform.localScale *= 2;
+                            obj.currency = false;
+                            obj.target = card.transform.position + new Vector3(Mathf.Cos(2 * 3.14f * ((float)k) / 32f), Mathf.Sin(2 * 3.14f * ((float)k) / 32f)) * 3f;
+                            obj.val = cardval;
+                        }
+                    }
+                    else if (hitag.Equals("PlayerSkill"))
+                    {
+                        if (!rh[i].collider.transform.GetComponent<PlayerSword>())
+                        {
+                            stuck = false;
+                        }
+                    }
+                    else if (hitag.Equals("EnemyShot"))
+                    {
+                        plyr.GetComponent<PlayerMove>().HitByAttack();
                     }
                     else
                     {
-                        recall = true;
+                        stuck = false;
                     }
                 }
             }
         }
-
-        MaskBlur = Resources.Load<GameObject>("Objects/Effects/MaskBlur");
-        Valk = Resources.Load<GameObject>("Objects/Valknut");
 
     }
 
