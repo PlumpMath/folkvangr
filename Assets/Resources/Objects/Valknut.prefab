@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recall: 0
+  currency: 1
 --- !u!212 &212878812980396858
 SpriteRenderer:
   m_ObjectHideFlags: 1

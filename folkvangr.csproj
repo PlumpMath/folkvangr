@@ -225,35 +225,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DemoReturn.cs" />
-    <Compile Include="Assets\Door.cs" />
-    <Compile Include="Assets\InfoBlock.cs" />
-    <Compile Include="Assets\MoneyBlock.cs" />
-    <Compile Include="Assets\OdinIntro.cs" />
-    <Compile Include="Assets\PlayerBullet.cs" />
-    <Compile Include="Assets\PlayerSword.cs" />
-    <Compile Include="Assets\Scripts\AttuneDiag.cs" />
-    <Compile Include="Assets\Scripts\EffectDisappear.cs" />
-    <Compile Include="Assets\Scripts\EventBlock.cs" />
-    <Compile Include="Assets\Scripts\FadeOverTime.cs" />
-    <Compile Include="Assets\Scripts\Gatekeeper.cs" />
-    <Compile Include="Assets\Scripts\LevelManager.cs" />
-    <Compile Include="Assets\Scripts\LinearBulletRaw.cs" />
-    <Compile Include="Assets\Scripts\LinearFire.cs" />
-    <Compile Include="Assets\Scripts\MaskSpin.cs" />
-    <Compile Include="Assets\Scripts\MessageBox.cs" />
-    <Compile Include="Assets\Scripts\MonsterStats.cs" />
-    <Compile Include="Assets\Scripts\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\PlayerStats.cs" />
-    <Compile Include="Assets\Scripts\Portobeyo.cs" />
-    <Compile Include="Assets\Scripts\SignMessage.cs" />
-    <Compile Include="Assets\Scripts\Speech.cs" />
-    <Compile Include="Assets\Scripts\SpeechContainer.cs" />
-    <Compile Include="Assets\Scripts\SporeBullet.cs" />
-    <Compile Include="Assets\Scripts\TitleScreen.cs" />
-    <Compile Include="Assets\Scripts\TuningCard.cs" />
-    <Compile Include="Assets\StatsPreset.cs" />
-    <Compile Include="Assets\Valknut.cs" />
+    <Compile Include="Assets\Scripts\Bullets\LinearBulletRaw.cs" />
+    <Compile Include="Assets\Scripts\Bullets\LinearFire.cs" />
+    <Compile Include="Assets\Scripts\Bullets\SporeBullet.cs" />
+    <Compile Include="Assets\Scripts\Database\InputHandler.cs" />
+    <Compile Include="Assets\Scripts\Database\Speech.cs" />
+    <Compile Include="Assets\Scripts\Database\SpeechContainer.cs" />
+    <Compile Include="Assets\Scripts\Effects\EffectDisappear.cs" />
+    <Compile Include="Assets\Scripts\Effects\FadeOverTime.cs" />
+    <Compile Include="Assets\Scripts\Facilities\AttuneDiag.cs" />
+    <Compile Include="Assets\Scripts\Facilities\Gatekeeper.cs" />
+    <Compile Include="Assets\Scripts\Facilities\StatsPreset.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\MessageBox.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\TitleScreen.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\TuningCard.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Valknut.cs" />
+    <Compile Include="Assets\Scripts\Monsters\MonsterStats.cs" />
+    <Compile Include="Assets\Scripts\Monsters\Portobeyo.cs" />
+    <Compile Include="Assets\Scripts\Objects\Door.cs" />
+    <Compile Include="Assets\Scripts\Objects\EventBlock.cs" />
+    <Compile Include="Assets\Scripts\Objects\SignMessage.cs" />
+    <Compile Include="Assets\Scripts\Player\InfoBlock.cs" />
+    <Compile Include="Assets\Scripts\Player\MaskSpin.cs" />
+    <Compile Include="Assets\Scripts\Player\MoneyBlock.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerBullet.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSword.cs" />
+    <Compile Include="Assets\Scripts\Story\DemoReturn.cs" />
+    <Compile Include="Assets\Scripts\Story\OdinIntro.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Data\Dialogue\Facilities\attune.xml" />
